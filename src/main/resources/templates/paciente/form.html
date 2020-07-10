@@ -11,8 +11,7 @@
             <form th:action="@{/paciente/(form)}" th:object="${paciente}" method="post">
                 <div class="form-group">
                     <label for="txtnome">Nome</label>
-                    <input type="text" th:field="*{nome}" class="form-control" 
-                    id="txtnome" placeholder="Nome">
+                    <input type="text" th:field="*{nome}" class="form-control">
                 </div>
                 
                 
