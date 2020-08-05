@@ -40,7 +40,20 @@
         <script type="text/javascript"> 
             
             $(document).ready(function(){
-                bootbox.alert("Hello world!");    
+                $("#pacientes").on("click",".js-delete", function(){
+                    var button = $(this);
+                    bootbox.confirm("Confirma exclusão do paciente?", function(result){
+                        if(result){
+                            $.ajax({
+		                        url: "/paciente/delete/" + button.attr("data-paciente-id"),
+		                        method: "GET",
+		                        success: function () {
+		                        	window.location.href = "/paciente/"
+		                        }
+		                    });
+                        }
+                    });
+                });
             });
             
 
