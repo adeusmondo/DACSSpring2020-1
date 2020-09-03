@@ -34,7 +34,7 @@ public class MyUserDetailsService implements UserDetailsService {
     }
 
     public void save(Usuario usuario){
-        if (usuario.getSenha().length() != 0)
+        if (usuario.getSenha().length() != 0) 
             usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
         service.save(usuario);
     }

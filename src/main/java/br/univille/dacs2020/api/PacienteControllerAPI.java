@@ -23,6 +23,7 @@ public class PacienteControllerAPI {
     @Autowired
     private PacienteService service;
 
+    
     @GetMapping
     public ResponseEntity<List<Paciente>> getAll(){
         List<Paciente> lista = service.getAll();
