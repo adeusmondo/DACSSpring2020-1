@@ -13,3 +13,13 @@
 - Na próxima tela, clicar em edit Settings.json
 - Na propriedade "java_home" informar o valor "/usr/lib/jvm/jdk-11.0.8+10"
 - Fechar e abrir o VSCode
+
+
+##Build Docker image
+- Incluir o pluggin do Spotify no arquivo pom.xml
+- Instalar o Maven, no CodeSpaces
+- sudo apt-get update
+- sudo apt-get install maven
+- Build da imagem: mvn install docker:build
+- Instalar o Docker Compose: sudo apt-get install docker-compose
+- docker-compose up -d
